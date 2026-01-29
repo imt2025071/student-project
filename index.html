@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Campus Events Portal — Home</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Shared header -->
+  <header class="site-header">
+    <div class="container header-inner" style="position: relative; bottom: 12px;">
+      <a class="brand" href="index.html" aria-label="Campus Events Portal">
+        <!-- Inline SVG logo (matches design style) -->
+        <svg class="logo-mark" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="1" stop-color="#06B6D4"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="44" height="44" rx="10" fill="url(#g1)"/>
+          <path d="M13 30c4-6 18-6 18-14" stroke="rgba(255,255,255,0.9)" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-title">Campus Events Portal</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="events.html" class="nav-link">Events</a>
+        <a href="clubs.html" class="nav-link">Clubs</a>
+      </nav>
+
+        <!-- User display (updated by JS when signed in) -->
+        <div id="userWrap" style="display:flex;align-items:center;gap: 8px;">
+          <span id="userDisplay" class="user-chip" style="display:none;"></span>
+          <button id="signInBtn" class="btn small">Sign in</button>
+        </div>
+    </div>
+  </header>
+ 
+
+  <main class="container hero">
+    <div class="hero-left">
+      <p class="eyebrow">Welcome to Campus Events Portal</p>
+      <h1 class="hero-title">Everything happening on campus, in one place</h1>
+      <p class="hero-sub">Stay updated with all college events, club activities, and campus announcements. Never miss out on what matters.</p>
+
+      <div class="hero-cta">
+        <a href="events.html" class="btn primary">Browse Events</a>
+        <a href="clubs.html" class="btn ghost">Explore Clubs</a>
+      </div>
+    </div>
+
+    <div class="hero-right" aria-hidden="true">
+      <!-- Decorative SVG illustration to match screenshot look -->
+      <svg width="420" height="300" viewBox="0 0 420 300" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero-illustration">
+        <defs>
+          <linearGradient id="hg1" x1="0" x2="1">
+            <stop offset="0" stop-color="#4F46E5"/>
+            <stop offset="1" stop-color="#06B6D4"/>
+          </linearGradient>
+        </defs>
+        <rect x="20" y="20" width="380" height="260" rx="18" fill="url(#hg1)" opacity="0.08"/>
+        <g transform="translate(40,40)">
+          <rect x="0" y="0" width="160" height="110" rx="10" fill="#fff" opacity="0.95" />
+          <rect x="180" y="0" width="160" height="50" rx="8" fill="#fff" opacity="0.95" />
+          <rect x="180" y="70" width="160" height="90" rx="8" fill="#fff" opacity="0.95" />
+        </g>
+      </svg>
+    </div>
+  </main>
+
+  <!-- Live updates --> <main class="container hero">
+  <section class="container live-updates">
+    <div class="section-head">
+      <h2>Live Updates</h2>
+      <p class="muted">What's happening right now</p>
+    </div>
+
+     <div class="cards-grid">
+      <article class="card">
+        <span class="badge live">Live</span>
+        <h3 class="card-title">ML Workshop happening today</h3>
+        <p class="card-meta">Lab 301 • 2:00 PM - 5:00 PM</p>
+        <p class="card-desc">Machine Learning Workshop starts at 2 PM in Lab 301. Limited seats available!</p>
+      </article>
+      <article class="card">
+        <span class="badge live">Live</span>
+        <h3 class="card-title">ML Workshop happening today</h3>
+        <p class="card-meta">Lab 301 • 2:00 PM - 5:00 PM</p>
+        <p class="card-desc">Machine Learning Workshop starts at 2 PM in Lab 301. Limited seats available!</p>
+      </article>
+      <article class="card">
+        <span class="badge live">Live</span>
+        <h3 class="card-title">ML Workshop happening today</h3>
+        <p class="card-meta">Lab 301 • 2:00 PM - 5:00 PM</p>
+        <p class="card-desc">Machine Learning Workshop starts at 2 PM in Lab 301. Limited seats available!</p>
+      </article>
+     </div>
+
+     <div class="cards-grid" style="margin-top:18px;">
+      <article class="card">
+        <span class="badge today">Today</span>
+        <h3 class="card-title">Web Development Session</h3>
+        <p class="card-meta">Room 204 • 4:00 PM - 6:00 PM</p>
+        <p class="card-desc">Hands-on web dev session for beginners—bring your laptop.</p>
+      </article>
+      <article class="card">
+        <span class="badge today">Today</span>
+        <h3 class="card-title">Graphic Design Meetup</h3>
+        <p class="card-meta">Studio • 5:00 PM - 7:00 PM</p>
+        <p class="card-desc">Aakriti practice and portfolio reviews.</p>
+      </article>
+      <article class="card">
+        <span class="badge today">Today</span>
+        <h3 class="card-title">Robotics Demo</h3>
+        <p class="card-meta">Lab 105 • 3:00 PM - 4:30 PM</p>
+        <p class="card-desc">ECHO club showcases recent robot builds.</p>
+      </article>
+     </div>
+
+     <div class="cards-grid" style="margin-top:18px;">
+      <article class="card">
+        <span class="badge warn">Closing Soon</span>
+        <h3 class="card-title">Hackathon registrations closing today</h3>
+        <p class="card-meta">Online • 11:59 PM</p>
+        <p class="card-desc">Last chance to register! Registrations close at 11:59 PM tonight.</p>
+      </article>
+      <article class="card">
+        <span class="badge warn">Closing Soon</span>
+        <h3 class="card-title">Project Submission Deadline</h3>
+        <p class="card-meta">Portal • 11:59 PM</p>
+        <p class="card-desc">Submit your winter project by tonight.</p>
+      </article>
+      <article class="card">
+        <span class="badge warn">Closing Soon</span>
+        <h3 class="card-title">Design Challenge entries due</h3>
+        <p class="card-meta">Online • 11:59 PM</p>
+        <p class="card-desc">Final chance to submit Aakriti entries.</p>
+      </article>
+     </div>
+  </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Campus Events Portal</h4>
+        <p class="muted">Your centralized platform for all campus events, club activities, and updates.</p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#">Academic Calendar</a></li>
+          <li><a href="#">Student Resources</a></li>
+          <li><a href="#">Campus Map</a></li>
+          <li><a href="#">Contact Support</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact Info</h4>
+        <p class="muted">events@college.edu<br>+1 (555) 123-4567<br>Campus Center, Building A</p>
+      </div>
+    </div>
+
+    <div class="container copyright">
+      © 2026 College Events & Updates Portal. All rights reserved.
+    </div>
+  </footer>
+
+  <!-- Sign In / Register modal (hidden by default) -->
+  <div id="authModal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-labelledby="authTitle">
+      <button id="closeAuth" class="modal-close" title="Close">✕</button>
+
+      
+
+      <p class="muted" style="margin-top:12px;">Note: This demo stores credentials locally in your browser (localStorage). Don't use real passwords here.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
