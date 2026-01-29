@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Campus Events Portal — Clubs</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Campus Events Portal">
+        <svg class="logo-mark" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="g3" x1="0" x2="1" y1="0" y2="1">
+              <stop offset="0" stop-color="#4F46E5"/>
+              <stop offset="1" stop-color="#06B6D4"/>
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="44" height="44" rx="10" fill="url(#g3)"/>
+          <path d="M13 30c4-6 18-6 18-14" stroke="rgba(255,255,255,0.9)" stroke-width="2.5" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-title">Campus Events Portal</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="events.html" class="nav-link">Events</a>
+        <a href="clubs.html" class="nav-link active">Clubs</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn small" id="signInBtn3">Sign in</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container clubs-hero">
+    <h1>Campus Clubs</h1>
+    <p class="muted">Join clubs, attend events, and connect with like-minded students across campus.</p>
+
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num">9</div>
+        <div class="stat-label">Active Clubs</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">1,133</div>
+        <div class="stat-label">Total Members</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">11</div>
+        <div class="stat-label">Upcoming Events</div>
+      </div>
+    </div>
+  </main>
+
+  <section class="container filters">
+    <div class="filter-row" role="tablist" aria-label="Event categories">
+      <button class="chip active" data-filter="all">All Clubs(15)</button>
+      <button class="chip" data-filter="technical">Technical (9)</button>
+      <button class="chip" data-filter="cultural">Cultural (3)</button>
+      <button class="chip" data-filter="sports">Sports (1)</button>
+      <button class="chip" data-filter="welfare">Welfare (2)</button>
+      <button class="chip" data-filter="workshops">Workshops (2)</button>
+    </div>
+  </section>
+
+  <section class="container clubs-list">
+    <!-- cards-grid holds all club cards; CSS makes it 3 across -->
+    <div class="cards-grid">
+
+      <a href="ieee.html" class="article-link">
+        <article class="club-card">
+          <div class="club-head">
+            <h3>IEEE</h3>
+            <span class="club-tag">Technical</span>
+          </div>
+          <p class="muted">Engineering and technology society — workshops, projects, and meetups.</p>
+        </article>
+      </a>
+
+      <a href="aasf.html" class="article-link">
+        <article class="club-card">
+          <div class="club-head">
+            <h3>AASF</h3>
+            <span class="club-tag">Technical</span>
+          </div>
+          <p class="muted">AASF brings coding competitions, hackathons and technical talks.</p>
+        </article>
+      </a>
+
+      <a href="ecell.html" class="article-link">
+        <article class="club-card">
+          <div class="club-head">
+            <h3>E-Cell</h3>
+            <span class="club-tag">Technical</span>
+          </div>
+          <p class="muted">Entrepreneurship cell — startup workshops and pitch events.</p>
+        </article>
+      </a>
+
+      <a href="uthan.html" class="article-link">
+        <article class="club-card">
+          <div class="club-head">
+            <h3>UTHAAN</h3>
+            <span class="club-tag">Technical</span>
+          </div>
+          <p class="muted">Student-driven initiatives around innovation and social impact.</p>
+        </article>
+      </a>
+
+      <a href="enigma.html" class="article-link">
+        <article class="club-card">
+          <div class="club-head">
+            <h3>The ENIGMA Society</h3>
+            <span class="club-tag">Technical</span>
+          </div>
+          <p class="muted">Security, puzzles and cryptography workshops and contests.</p>
+        </article>
+      </a>
+
+      <a href="relu.html" class="article-link">
+        <article class="club-card">
+          <div class="club-head">
+            <h3>ReLU_</h3>
+            <span class="club-tag">Technical</span>
+          </div>
+          <p class="muted">Machine learning and AI study group with projects and talks.</p>
+        </article>
+      </a>
+
+      <a href="zerodays.html" class="article-link">
+        <article class="club-card">
+          <div class="club-head">
+            <h3>O-day</h3>
+            <span class="club-tag">Technical</span>
+          </div>
+          <p class="muted">Orientation day organizers and student welcoming events.</p>
+        </article>
+      </a>
+
+      <a href="gdg.html" class="article-link">
+        <article class="club-card">
+          <div class="club-head">
+            <h3>GDG</h3>
+            <span class="club-tag">Technical</span>
+          </div>
+          <p class="muted">Google Developer Group chapter — tech talks and community projects.</p>
+        </article>
+      </a>
+
+      <a href="echo.html" class="article-link">
+        <article class="club-card">
+          <div class="club-head">
+            <h3>ECHO</h3>
+            <span class="club-tag">Technical</span>
+          </div>
+          <p class="muted">Electronics and hardware club for makers and embedded projects.</p>
+        </article>
+      </a>
+
+      <a href="manchtantra.html" class="article-link">
+        <article class="club-card">
+          <div class="club-head">
+            <h3>Manchtantra</h3>
+            <span class="club-tag">Cultural</span>
+          </div>
+          <p class="muted">Cultural events, drama and performance group.</p>
+        </article>
+      </a>
+
+      <a href="beathoppers.html" class="article-link">
+        <article class="club-card">
+          <div class="club-head">
+            <h3>Beat Hoppers</h3>
+            <span class="club-tag">Cultural</span>
+          </div>
+          <p class="muted">Dance and choreography club.                                                                        </p>
+          <br>
+        </article>
+      </a>
+
+      <a href="someclubs.html" class="article-link">
+        <article class="club-card">
+          <div class="club-head">
+            <h3>Some Independent Music Bands</h3>
+            <span class="club-tag">Cultural</span>
+          </div>
+          <p class="muted">Student bands and music collaboration group.</p>
+        </article>
+      </a>
+
+      <a href="sportscomittee.html" class="article-link">
+        <article class="club-card">
+          <div class="club-head">
+            <h3>Sports Committees</h3>
+            <span class="club-tag">Sports</span>
+          </div>
+          <p class="muted">Manage sports activities, tournaments and fitness programs.</p>
+        </article>
+      </a>
+
+      <a href="sgm.html" class="article-link">
+        <article class="club-card">
+          <div class="club-head">
+            <h3>SGM</h3>
+            <span class="club-tag">Welfare</span>
+          </div>
+          <p class="muted">Student welfare group focused on student support and activities.</p>
+        </article>
+      </a>
+
+      <a href="rotaract.html" class="article-link">
+        <article class="club-card">
+          <div class="club-head">
+            <h3>ROTARACT</h3>
+            <span class="club-tag">Welfare</span>
+          </div>
+          <p class="muted">Rotaract chapter — community service and outreach programs.</p>
+        </article>
+      </a>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Campus Events Portal</h4>
+        <p class="muted">Your centralized platform for all campus events, club activities, and updates.</p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#">Academic Calendar</a></li>
+          <li><a href="#">Student Resources</a></li>
+          <li><a href="#">Campus Map</a></li>
+          <li><a href="#">Contact Support</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact Info</h4>
+        <p class="muted">events@college.edu<br>+1 (555) 123-4567<br>Campus Center, Building A</p>
+      </div>
+    </div>
+
+    <div class="container copyright">
+      © 2026 College Events & Updates Portal. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Campus Events Portal - Events</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <div class="logo-mark"></div>
+        <span class="brand-title">Campus Events Portal</span>
+      </div>
+
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="events.html" class="nav-link active">Events</a>
+        <a href="clubs.html" class="nav-link">Clubs</a>
+      </nav>
+
+      <button class="btn small" id="signInBtn2">Sign in</button>
+    </div>
+  </header>
+
+  <!-- Events Hero -->
+  <section class="events-hero">
+    <div class="container">
+      <h1>Campus Events</h1>
+      <p class="muted">Discover all events happening across campus. Filter by time or search to find what interests you.</p>
+    </div>
+  </section>
+
+  <!-- Filters + Search -->
+  <section class="filters">
+    <div class="container">
+      <div class="filter-row">
+        <button class="chip active" data-filter="all">All Events (0)</button>
+        <button class="chip" data-filter="live">Live (0)</button>
+        <button class="chip" data-filter="today">Today (0)</button>
+        <button class="chip" data-filter="closing">Closing Soon (0)</button>
+        <button class="chip" data-filter="upcoming">Upcoming (0)</button>
+      </div>
+
+      <div style="margin-top:12px; display:flex; gap:12px; align-items:center;">
+        <input id="searchInput" type="text" placeholder="Search events..." style="flex:0.25; padding:10px 12px; border-radius:10px; border:1px solid rgba(15,23,42,0.06);">
+        <button id="clearSearchBtn" class="btn small" style="padding:10px 12px;">Clear</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events List -->
+  <section class="events-list container" id="eventsList">
+    <!-- Each event-card now has data-time attribute: live, today, closing, upcoming -->
+    <div class="event-card" data-time="live">
+      <div class="event-head">
+        <h3 class="event-title">Tech Fest Day 2</h3>
+        <span class="tag live">Live</span>
+      </div>
+      <p class="event-meta">Computer Science Club • Jan 8, 2026 • 10:00 AM - 6:00 PM • Main Auditorium</p>
+      <p class="event-desc">Day 2 of our annual tech fest featuring AI workshops, coding competitions, and tech talks from industry leaders.</p>
+    </div>
+
+    <div class="event-card" data-time="closing">
+      <div class="event-head">
+        <h3 class="event-title">Hackathon 2026 Registration</h3>
+        <span class="tag warn">Closing Soon</span>
+      </div>
+      <p class="event-meta">Tech Innovation Club • Jan 8, 2026 • Online</p>
+      <p class="event-desc">Last day to register for the biggest campus hackathon of the year. 48 hours of innovation and coding.</p>
+    </div>
+
+    <div class="event-card" data-time="today">
+      <div class="event-head">
+        <h3 class="event-title">Cultural Night - Dance Competition</h3>
+        <span class="tag today">Today</span>
+      </div>
+      <p class="event-meta">Cultural Committee • Jan 10, 2026 • Open Air Theatre</p>
+      <p class="event-desc">Showcase your dancing skills in various categories: classical, contemporary, hip-hop, and folk.</p>
+    </div>
+
+    <div class="event-card" data-time="today">
+      <div class="event-head">
+        <h3 class="event-title">Machine Learning Workshop</h3>
+        <span class="tag today">Today</span>
+      </div>
+      <p class="event-meta">AI & ML Club • Jan 9, 2026 • 2:00 PM - 5:00 PM • Lab 301</p>
+      <p class="event-desc">Hands-on workshop on building ML models with TensorFlow. Bring your laptops!</p>
+    </div>
+
+    <div class="event-card" data-time="upcoming">
+      <div class="event-head">
+        <h3 class="event-title">Inter-College Basketball Tournament</h3>
+        <span class="tag upcoming">Upcoming</span>
+      </div>
+      <p class="event-meta">Sports Committee • Jan 12, 2026 • Sports Complex</p>
+      <p class="event-desc">Annual basketball tournament featuring teams from 12 colleges across the city.</p>
+    </div>
+
+    <div class="event-card" data-time="upcoming">
+      <div class="event-head">
+        <h3 class="event-title">Debate Competition Finals</h3>
+        <span class="tag upcoming">Upcoming</span>
+      </div>
+      <p class="event-meta">Literary Society • Jan 11, 2026 • Conference Hall</p>
+      <p class="event-desc">Final round of the inter-department debate competition on contemporary issues.</p>
+    </div>
+
+    <div class="event-card" data-time="today">
+      <div class="event-head">
+        <h3 class="event-title">Music Jam Session</h3>
+        <span class="tag today">Today</span>
+      </div>
+      <p class="event-meta">Music Club • Jan 9, 2026 • 6:00 PM - 8:00 PM • Student Center</p>
+      <p class="event-desc">Open mic and jam session for all music enthusiasts. Bring your instruments!</p>
+    </div>
+
+    <div class="event-card" data-time="upcoming">
+      <div class="event-head">
+        <h3 class="event-title">Web Development Bootcamp</h3>
+        <span class="tag upcoming">Upcoming</span>
+      </div>
+      <p class="event-meta">Dev Society • Jan 13, 2026 • Computer Lab 2</p>
+      <p class="event-desc">Full-day bootcamp covering React, Node.js, and modern web development practices.</p>
+    </div>
+
+    <!-- Example extra events to demonstrate Show All behavior -->
+    <div class="event-card" data-time="upcoming">
+      <div class="event-head">
+        <h3 class="event-title">AI Speaker Series</h3>
+        <span class="tag upcoming">Upcoming</span>
+      </div>
+      <p class="event-meta">AI & ML Club • Jan 14, 2026 • Lecture Hall</p>
+      <p class="event-desc">Talks from industry experts on recent AI trends and research.</p>
+    </div>
+
+    <div class="event-card" data-time="closing">
+      <div class="event-head">
+        <h3 class="event-title">Photography Contest Registration</h3>
+        <span class="tag warn">Closing Soon</span>
+      </div>
+      <p class="event-meta">Arts Club • Jan 9, 2026 • Online</p>
+      <p class="event-desc">Submit your best campus photos. Registrations close tonight.</p>
+    </div>
+
+    <div class="event-card" data-time="live">
+      <div class="event-head">
+        <h3 class="event-title">Robotics Demo</h3>
+        <span class="tag live">Live</span>
+      </div>
+      <p class="event-meta">Robotics Club • Jan 9, 2026 • 3:00 PM • Lab 2</p>
+      <p class="event-desc">Live demos of student-built robots and Q&A with the team.</p>
+    </div>
+
+    <div class="event-card" data-time="upcoming">
+      <div class="event-head">
+        <h3 class="event-title">Career Fair</h3>
+        <span class="tag upcoming">Upcoming</span>
+      </div>
+      <p class="event-meta">Placement Cell • Jan 20, 2026 • Main Hall</p>
+      <p class="event-desc">Meet recruiters from top companies and explore internship opportunities.</p>
+    </div>
+  </section>
+
+  <!-- Show All button wrapper -->
+  <div class="container" style="text-align:center; margin-top: 18px;">
+    <button id="showAllBtn" class="btn">Show All</button>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h4>Campus Events Portal</h4>
+        <p class="muted">Your centralized platform for all campus events, club activities, and updates.</p>
+      </div>
+
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#">Academic Calendar</a></li>
+          <li><a href="#">Student Resources</a></li>
+          <li><a href="#">Campus Map</a></li>
+          <li><a href="#">Contact Support</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Contact Info</h4>
+        <p class="muted">events@college.edu<br>+1 (555) 123-4567<br>Campus Center, Building A</p>
+      </div>
+    </div>
+    <p class="muted" style="text-align:center; margin-top:12px;">© 2026 College Events & Updates Portal. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
